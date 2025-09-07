@@ -1,5 +1,3 @@
-// src/pages/Home.tsx
-import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import HeroSection from "../components/HeroSection";
 import HeroFilters from "../components/HeroFilters";
@@ -13,8 +11,6 @@ import BestPropertiesForSale from "../components/BestPropertiesForSale";
 import BestPropertiesForRent from "../components/BestPropertiesForRent";
 
 export default function Home() {
-  const navigate = useNavigate();
-
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
@@ -31,12 +27,12 @@ export default function Home() {
 
       {/* Buy Section */}
       <section id="buy">
-        <BestPropertiesForSale navigate={navigate} />
+        <BestPropertiesForSale />
       </section>
 
       {/* Rent Section */}
       <section id="rent">
-        <BestPropertiesForRent navigate={navigate} />
+        <BestPropertiesForRent />
       </section>
 
       {/* Sell Section */}

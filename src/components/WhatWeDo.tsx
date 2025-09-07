@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import WhatWeDoCard from "./WhatWeDoCard";
 import { FaChartLine, FaKey, FaRobot, FaLock } from "react-icons/fa";
 
@@ -31,7 +31,7 @@ export default function WhatWeDo() {
   ];
 
   // Animation variants
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0, y: 50 },
     visible: {
       opacity: 1,
@@ -43,13 +43,16 @@ export default function WhatWeDo() {
     },
   };
 
-  const cardVariants = {
+  const cardVariants: Variants = {
     hidden: { opacity: 0, scale: 0.9, y: 30 },
     visible: {
       opacity: 1,
       scale: 1,
       y: 0,
-      transition: { duration: 0.5, ease: "easeOut" },
+      transition: {
+        duration: 0.5,
+        ease: "easeOut" as const, // ✅ fix: typed easing
+      },
     },
   };
 

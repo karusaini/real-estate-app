@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import { useEffect, useState } from "react";
 import { FaMapMarkerAlt, FaBookmark } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
@@ -77,7 +76,7 @@ const PropertyCard = ({ property }: { property: Property }) => {
 
 export default function BestPropertiesForSale() {
   const [properties, setProperties] = useState<Property[]>([]);
-  const [visibleCount, setVisibleCount] = useState(4);
+  const [visibleCount] = useState(4);
   const navigate = useNavigate();
 
   useEffect(() => {

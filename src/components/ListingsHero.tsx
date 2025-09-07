@@ -1,6 +1,4 @@
-// src/components/ListingsHero.tsx
-import React from "react";
-import heroImg from "../assets/listings-hero.jpg"; // apna image path use karo
+import heroImg from "../assets/listings-hero.jpg";
 
 export default function ListingsHero() {
   return (

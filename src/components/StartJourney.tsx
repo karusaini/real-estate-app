@@ -1,4 +1,3 @@
-// src/components/StartJourney.tsx
 import { useState } from "react";
 import { FaChevronDown } from "react-icons/fa";
 import { motion } from "framer-motion";
@@ -20,7 +19,6 @@ export default function StartJourney() {
     setError("");
     console.log("Form submitted:", { name, userType, location });
 
-    // ✅ Navigate to Listings page with query params
     navigate(
       `/listings?name=${encodeURIComponent(name)}&type=${encodeURIComponent(
         userType

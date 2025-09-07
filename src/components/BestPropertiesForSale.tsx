@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import { useEffect, useState } from "react";
 import { FaMapMarkerAlt, FaBookmark } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
@@ -16,24 +15,18 @@ interface Property {
 
 const PropertyCard = ({ property }: { property: Property }) => {
   const navigate = useNavigate();
-
   return (
     <motion.div
       className="w-full max-w-[341px] bg-white rounded-[20px] shadow-md overflow-hidden flex flex-col"
-      initial={{ opacity: 0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
       whileHover={{ scale: 1.03 }}
+      transition={{ duration: 0.3 }}
     >
       {/* Image */}
       <div className="w-full h-[200px] overflow-hidden">
-        <motion.img
+        <img
           src={property.image}
           alt={property.name}
-          className="w-full h-full object-cover rounded-t-[20px]"
-          whileHover={{ scale: 1.1 }}
-          transition={{ duration: 0.4 }}
+          className="w-full h-full object-cover"
         />
       </div>
 
@@ -68,15 +61,13 @@ const PropertyCard = ({ property }: { property: Property }) => {
           >
             ${Math.floor(Math.random() * 900000) + 100000}
           </span>
-          <motion.button
+          <button
             onClick={() => navigate(`/property/${property.id}`)}
-            className="bg-[#1E3A8A] text-white text-[14px] font-semibold px-4 py-2 rounded-[31px] hover:bg-blue-800 transition cursor-pointer"
+            className="bg-[#1E3A8A] hover:bg-blue-700 text-white text-[14px] font-semibold px-4 py-2 rounded-[31px] transition cursor-pointer"
             style={{ fontFamily: "Poppins" }}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
           >
             Know More
-          </motion.button>
+          </button>
         </div>
       </div>
     </motion.div>
@@ -85,7 +76,7 @@ const PropertyCard = ({ property }: { property: Property }) => {
 
 export default function BestPropertiesForSale() {
   const [properties, setProperties] = useState<Property[]>([]);
-  const [visibleCount, setVisibleCount] = useState(4);
+  const [visibleCount] = useState(4); // ✅ removed unused setVisibleCount
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -94,6 +85,7 @@ export default function BestPropertiesForSale() {
     )
       .then((res) => res.json())
       .then((data) => {
+        // ✅ Only show sale-type properties
         const saleProps = data.filter(
           (p: Property) =>
             p.type?.toLowerCase() === "sale" || p.type === undefined
@@ -107,59 +99,43 @@ export default function BestPropertiesForSale() {
     <section className="w-full py-16 px-4 sm:px-6 lg:px-12 bg-[#F9F9F9]">
       <div className="max-w-[1440px] mx-auto flex flex-col gap-10">
         {/* Heading + Button */}
-        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
-          <motion.h2
-            className="text-[#1E3A8A] font-bold text-2xl sm:text-3xl md:text-4xl"
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 md:gap-0">
+          <h2
+            className="text-[#1E3A8A] font-bold text-3xl sm:text-4xl"
             style={{ fontFamily: "Poppins" }}
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
           >
             Best Properties Available For Sale
-          </motion.h2>
+          </h2>
 
-          <motion.button
+          <button
             onClick={() => navigate("/listings?filter=sale")}
             className="bg-[#1E3A8A] text-white font-semibold text-lg px-6 py-2 rounded-[31px] hover:bg-blue-700 transition cursor-pointer"
             style={{ fontFamily: "Poppins" }}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
           >
             View More Properties
-          </motion.button>
+          </button>
         </div>
 
         {/* Description */}
-        <motion.p
-          className="text-[#555555] text-base sm:text-lg md:text-[20px] leading-7 md:leading-8"
+        <p
+          className="text-[#555555] text-lg sm:text-xl md:text-[20px] leading-7 md:leading-8"
           style={{
             fontFamily: "Poppins",
             fontWeight: 400,
-            letterSpacing: "1px",
+            letterSpacing: "2%",
           }}
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.2, duration: 0.8 }}
         >
           Browse our top-rated properties for sale, featuring premium listings
-          tailored to your needs. <br className="hidden sm:block" />
+          tailored to your needs. <br />
           Find your dream home today!
-        </motion.p>
+        </p>
 
-        {/* Cards Grid */}
-        <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 place-items-center"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.3, duration: 0.8 }}
-        >
+        {/* Property Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 place-items-center">
           {properties.slice(0, visibleCount).map((property) => (
             <PropertyCard key={property.id} property={property} />
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );
