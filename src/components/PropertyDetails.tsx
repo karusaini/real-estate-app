@@ -65,7 +65,6 @@ export default function PropertyDetails() {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.7 }}
     >
-      {/* Back Button */}
       <button
         onClick={() => navigate(-1)}
         className="flex items-center gap-2 text-[#1E3A8A] font-semibold mb-6 hover:underline"
@@ -73,9 +72,7 @@ export default function PropertyDetails() {
         <FaArrowLeft /> Back
       </button>
 
-      {/* Property Card */}
       <div className="w-full max-w-5xl bg-white rounded-2xl shadow-lg overflow-hidden">
-        {/* Image */}
         <motion.img
           src={property.image}
           alt={property.name}
@@ -85,7 +82,6 @@ export default function PropertyDetails() {
           transition={{ duration: 0.8 }}
         />
 
-        {/* Info Section */}
         <div className="p-6 sm:p-10 flex flex-col gap-6">
           <div className="flex justify-between items-center">
             <h1

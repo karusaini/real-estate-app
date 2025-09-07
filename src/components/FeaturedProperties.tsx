@@ -21,16 +21,15 @@ export default function FeaturedProperties() {
     )
       .then((res) => res.json())
       .then((data) => {
-        setProperties(data.slice(0, 4)); // Top 4 featured properties
+        setProperties(data.slice(0, 4));
       })
       .catch((err) => console.log(err));
   }, []);
 
-  if (!properties.length) return null; // loading fallback
+  if (!properties.length) return null;
 
   return (
     <section className="w-full py-16 px-4 sm:px-6 lg:px-12 bg-[#FFFF]">
-      {/* Section Header */}
       <div className="flex flex-col lg:flex-row justify-between items-center mb-12 gap-4">
         <motion.h2
           className="text-[#1E3A8A] font-bold text-4xl sm:text-5xl text-center lg:text-left"
@@ -74,9 +73,7 @@ export default function FeaturedProperties() {
         </motion.button>
       </div>
 
-      {/* Images Row */}
       <div className="flex flex-col lg:flex-row gap-4 justify-center lg:justify-start flex-wrap">
-        {/* First property */}
         {properties[0] && (
           <motion.div
             className="relative w-full lg:w-[650px] h-[300px] sm:h-[400px] lg:h-[478px] rounded-lg overflow-hidden"
@@ -109,7 +106,6 @@ export default function FeaturedProperties() {
           </motion.div>
         )}
 
-        {/* Second property */}
         {properties[1] && (
           <motion.div
             className="w-full lg:w-[307px] h-[200px] sm:h-[300px] lg:h-[478px] rounded-lg overflow-hidden"
@@ -125,7 +121,6 @@ export default function FeaturedProperties() {
           </motion.div>
         )}
 
-        {/* Third and Fourth property */}
         <div className="flex flex-col gap-4 w-full lg:w-auto">
           {properties[2] && (
             <motion.div

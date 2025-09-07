@@ -1,5 +1,4 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-// src/services/propertyService.ts
 export interface Property {
   description: string;
   type: any;

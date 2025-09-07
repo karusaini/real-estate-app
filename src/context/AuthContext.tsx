@@ -1,4 +1,3 @@
-// src/context/AuthContext.tsx
 import React, { createContext, useContext, useEffect, useState } from "react";
 import { auth } from "../services/firebase";
 import { onAuthStateChanged, type User } from "firebase/auth";
@@ -32,7 +31,6 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({
       setUser(u);
       setLoading(false);
       if (u) {
-        // minimal user info for localStorage (avoid storing full firebase User)
         const minimal = {
           uid: u.uid,
           email: u.email,
@@ -47,21 +45,17 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({
   }, []);
 
   const signup = async (name: string, email: string, password: string) => {
-    // registerUser will create and set displayName
     await registerUser(name, email, password);
-    // NOTE: createUserWithEmailAndPassword auto signs-in the user.
-    // If you want user to login manually (assignment required redirect to login), sign them out:
+
     await logoutUser();
   };
 
   const login = async (email: string, password: string) => {
     await loginUser(email, password);
-    // onAuthStateChanged will update user & localStorage
   };
 
   const logout = async () => {
     await logoutUser();
-    // onAuthStateChanged will clear user & localStorage
   };
 
   return (

@@ -1,4 +1,3 @@
-// src/components/Footer.tsx
 import { useState } from "react";
 import { FaHome } from "react-icons/fa";
 import { motion } from "framer-motion";
@@ -13,7 +12,7 @@ export default function Footer() {
     console.log("Subscribed with email:", email);
     setSubmitted(true);
     setEmail("");
-    setTimeout(() => setSubmitted(false), 3000); // Auto hide after 3 sec
+    setTimeout(() => setSubmitted(false), 3000);
   };
 
   return (
@@ -25,7 +24,6 @@ export default function Footer() {
         viewport={{ once: true }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
-        {/* Heading */}
         <motion.h2
           className="text-white font-bold text-3xl sm:text-4xl md:text-5xl text-center"
           style={{ fontFamily: "Poppins", letterSpacing: "2%" }}
@@ -36,7 +34,6 @@ export default function Footer() {
           Get in Touch with Us
         </motion.h2>
 
-        {/* Subheading */}
         <motion.p
           className="text-white text-base sm:text-lg md:text-2xl text-center max-w-[600px] leading-relaxed"
           style={{ fontFamily: "Poppins" }}
@@ -47,7 +44,6 @@ export default function Footer() {
           Subscribe now for exclusive property insights and deals!
         </motion.p>
 
-        {/* Email Input + Submit Button */}
         <motion.form
           onSubmit={handleSubmit}
           className="relative w-full max-w-[602px] mt-6"
@@ -77,7 +73,6 @@ export default function Footer() {
           </div>
         </motion.form>
 
-        {/* Success Message */}
         {submitted && (
           <motion.p
             className="text-green-300 mt-4 font-medium"
@@ -91,14 +86,12 @@ export default function Footer() {
         )}
       </motion.div>
 
-      {/* Bottom Section */}
       <motion.div
         className="max-w-[1440px] mx-auto mt-12 flex flex-col md:flex-row justify-between items-center gap-6 border-t border-white/30 pt-6"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.8, duration: 0.8 }}
       >
-        {/* Left: Logo */}
         <div className="flex items-center gap-2">
           <div className="w-8 h-8 flex items-center justify-center">
             <FaHome className="w-6 h-6 text-white" />
@@ -111,7 +104,6 @@ export default function Footer() {
           </span>
         </div>
 
-        {/* Middle: Links with hover underline */}
         <div className="flex flex-wrap justify-center gap-4 sm:gap-6 text-white text-sm sm:text-base md:text-lg">
           {["For Sale", "Rentals", "New Projects", "Property News"].map(
             (link, i) => (
@@ -129,7 +121,6 @@ export default function Footer() {
           )}
         </div>
 
-        {/* Right: Copyright */}
         <span
           className="text-white text-sm sm:text-base md:text-lg text-center"
           style={{ fontFamily: "Poppins" }}

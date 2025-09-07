@@ -25,7 +25,6 @@ export default function HeroFilters() {
 
   const dropdownRef = useRef<HTMLDivElement>(null);
 
-  // Close dropdowns if clicked outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (
@@ -39,10 +38,8 @@ export default function HeroFilters() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  // Handle Find Property button
   const handleFindProperty = () => {
     console.log("Selected Filters:", selected);
-    // Here you can add navigation, API fetch, or filtering logic
     alert(
       `Searching for ${selected.rent} / ${selected.type} in ${selected.country}`
     );
@@ -81,7 +78,6 @@ export default function HeroFilters() {
         className="w-full max-w-[1106px] bg-white rounded-[46px] shadow-[8px_12px_48.9px_3px_rgba(0,0,0,0.15)] flex items-center px-4 sm:px-6 gap-4 flex-wrap sm:flex-nowrap py-4"
         ref={dropdownRef}
       >
-        {/* Rent */}
         <div
           className="flex items-center gap-3 bg-white border border-gray-400 rounded-lg px-4 py-2 cursor-pointer relative min-w-[120px]"
           onClick={() =>
@@ -104,7 +100,6 @@ export default function HeroFilters() {
           {renderDropdown("rent", options.rent)}
         </div>
 
-        {/* House Type */}
         <div
           className="flex items-center gap-3 bg-white border border-gray-400 rounded-lg px-4 py-2 cursor-pointer relative min-w-[120px]"
           onClick={() =>
@@ -127,7 +122,6 @@ export default function HeroFilters() {
           {renderDropdown("type", options.type)}
         </div>
 
-        {/* Country */}
         <div
           className="flex items-center gap-3 bg-white border border-gray-400 rounded-lg px-4 py-2 cursor-pointer relative min-w-[120px]"
           onClick={() =>
@@ -150,7 +144,6 @@ export default function HeroFilters() {
           {renderDropdown("country", options.country)}
         </div>
 
-        {/* Find Property Button */}
         <button
           className="ml-auto w-[194px] h-[58px] bg-[#1E3A8A] text-white rounded-[31px] text-lg font-normal hover:bg-blue-700 transition-colors cursor-pointer"
           style={{ fontFamily: "Poppins" }}

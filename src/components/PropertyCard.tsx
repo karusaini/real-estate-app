@@ -18,14 +18,11 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
 }) => {
   return (
     <div className="w-full sm:w-[90%] md:w-[340px] lg:w-[648px] bg-white rounded-[20px] shadow-[4px_4px_12px_0px_rgba(0,0,0,0.16)] overflow-hidden flex flex-col">
-      {/* Property Image */}
       <div className="w-full h-[200px] sm:h-[300px] md:h-[400px] lg:h-[510px] rounded-[24px] overflow-hidden">
         <img src={image} alt={name} className="w-full h-full object-cover" />
       </div>
 
-      {/* Property Info */}
       <div className="p-4 flex flex-col gap-2 relative">
-        {/* Location & Name */}
         <div className="flex items-center justify-between mb-2 flex-wrap sm:flex-nowrap">
           <div className="flex items-center gap-3">
             <FaMapMarkerAlt className="w-6 h-6 sm:w-7 sm:h-7 text-[#1E3A8A]" />
@@ -39,7 +36,6 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
           <FaBookmark className="w-6 h-6 sm:w-7 sm:h-7 text-[#1E3A8A] mt-2 sm:mt-0" />
         </div>
 
-        {/* Description */}
         <p
           className="text-[#555555] text-[14px] sm:text-[16px] leading-[20px] sm:leading-[25px]"
           style={{ fontFamily: "Poppins" }}
@@ -47,10 +43,8 @@ const PropertyCard: React.FC<PropertyCardProps> = ({
           {description}
         </p>
 
-        {/* Horizontal Divider Line */}
         <div className="my-4 w-full h-[0px] border-t-2 border-[#00000033]"></div>
 
-        {/* Price & Know More Button */}
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mt-4 gap-2">
           <span
             className="text-[#1E1E1E] font-semibold text-[20px] sm:text-[24px]"

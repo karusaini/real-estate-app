@@ -8,7 +8,7 @@ import { MdEmail } from "react-icons/md";
 import { AiFillEye } from "react-icons/ai";
 import { auth } from "../services/firebase";
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import { motion } from "framer-motion"; // ✅ Added
+import { motion } from "framer-motion";
 
 export default function Signup() {
   const [showPassword, setShowPassword] = useState(false);
@@ -70,7 +70,6 @@ export default function Signup() {
       <AuthNavbar />
 
       <div className="flex flex-col-reverse md:flex-row items-stretch justify-between flex-1 max-w-7xl mx-auto w-full px-6 py-12 gap-8 ">
-        {/* Form Section */}
         <motion.div
           className="w-full md:w-2/5 flex flex-col justify-center"
           initial={{ opacity: 0, x: -50 }}
@@ -91,7 +90,6 @@ export default function Signup() {
             className="w-full max-w-md flex flex-col gap-4"
             onSubmit={handleSignup}
           >
-            {/* Name */}
             <motion.div
               whileFocus={{ scale: 1.02 }}
               transition={{ duration: 0.2 }}
@@ -112,7 +110,6 @@ export default function Signup() {
               )}
             </motion.div>
 
-            {/* Email */}
             <motion.div className="relative" whileFocus={{ scale: 1.02 }}>
               <label className="block text-[16px] sm:text-[18px] font-medium text-[#000000] mb-2">
                 Email Address
@@ -131,7 +128,6 @@ export default function Signup() {
               )}
             </motion.div>
 
-            {/* Password */}
             <motion.div className="relative" whileFocus={{ scale: 1.02 }}>
               <label className="block text-[16px] sm:text-[18px] font-medium text-[#000000] mb-2">
                 Password
@@ -153,7 +149,6 @@ export default function Signup() {
               )}
             </motion.div>
 
-            {/* Confirm Password */}
             <motion.div className="relative" whileFocus={{ scale: 1.02 }}>
               <label className="block text-[16px] sm:text-[18px] font-medium text-[#000000] mb-2">
                 Confirm Password
@@ -177,7 +172,6 @@ export default function Signup() {
               )}
             </motion.div>
 
-            {/* Submit Button */}
             <motion.button
               type="submit"
               className="w-full h-[55px] sm:h-[62px] rounded-[34px] bg-[#1E3A8A] shadow-sm sm:shadow-md flex items-center justify-center text-white text-[20px] sm:text-[24px]"
@@ -200,7 +194,6 @@ export default function Signup() {
           </p>
         </motion.div>
 
-        {/* Illustration */}
         <motion.div
           className="w-full md:w-3/5 flex justify-center items-center"
           initial={{ opacity: 0, scale: 0.9 }}

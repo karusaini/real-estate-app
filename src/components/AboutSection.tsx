@@ -1,14 +1,12 @@
-// src/components/AboutSection.tsx
 import { FaMoneyBillWave, FaUsers, FaMapMarkerAlt } from "react-icons/fa";
-import img1 from "../assets/about1.jpg"; // 510x533
-import img2 from "../assets/about2.jpg"; // 408x405
+import img1 from "../assets/about1.jpg";
+import img2 from "../assets/about2.jpg";
 import { motion } from "framer-motion";
 
 export default function AboutSection() {
   return (
     <section className="w-full bg-white py-16 px-4 sm:px-6 lg:px-12">
       <div className="max-w-[1440px] mx-auto flex flex-col lg:flex-row items-center gap-12">
-        {/* Left Images */}
         <motion.div
           className="relative w-full lg:w-[500px] flex justify-center"
           initial={{ opacity: 0, x: -50 }}
@@ -24,7 +22,6 @@ export default function AboutSection() {
             />
           </div>
 
-          {/* Floating secondary image (desktop only) */}
           <motion.div
             className="absolute hidden lg:block lg:top-[180px] lg:left-[200px] w-[250px] h-[250px] xl:w-[340px] xl:h-[340px] border-[8px] xl:border-[10px] border-[#EEEEEE] rounded-lg overflow-hidden shadow-lg"
             initial={{ opacity: 0, scale: 0.9 }}
@@ -39,7 +36,6 @@ export default function AboutSection() {
           </motion.div>
         </motion.div>
 
-        {/* Right Content */}
         <motion.div
           className="flex-1 flex flex-col gap-10 max-w-[750px]"
           initial={{ opacity: 0, x: 50 }}
@@ -47,7 +43,6 @@ export default function AboutSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          {/* Heading */}
           <motion.h2
             className="text-[#1E3A8A] text-2xl sm:text-3xl md:text-[36px] font-bold leading-snug"
             style={{ fontFamily: "Poppins", letterSpacing: "1px" }}
@@ -59,7 +54,6 @@ export default function AboutSection() {
             For Our Valuable Clients
           </motion.h2>
 
-          {/* Feature 1 */}
           <motion.div
             className="flex items-start gap-4"
             whileHover={{ scale: 1.05 }}
@@ -78,7 +72,6 @@ export default function AboutSection() {
             </div>
           </motion.div>
 
-          {/* Feature 2 */}
           <motion.div
             className="flex items-start gap-4"
             whileHover={{ scale: 1.05 }}
@@ -97,7 +90,6 @@ export default function AboutSection() {
             </div>
           </motion.div>
 
-          {/* Feature 3 */}
           <motion.div
             className="flex items-start gap-4"
             whileHover={{ scale: 1.05 }}

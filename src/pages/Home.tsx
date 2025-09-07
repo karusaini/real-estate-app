@@ -15,39 +15,32 @@ export default function Home() {
     <div className="flex flex-col min-h-screen">
       <Navbar />
 
-      {/* Hero Section */}
       <section id="home">
         <HeroSection />
       </section>
 
-      {/* Filters */}
       <section>
         <HeroFilters />
       </section>
 
-      {/* Buy Section */}
       <section id="buy">
         <BestPropertiesForSale />
       </section>
 
-      {/* Rent Section */}
       <section id="rent">
         <BestPropertiesForRent />
       </section>
 
-      {/* Sell Section */}
       <section id="sell">
         <FeaturedProperties />
       </section>
 
-      {/* About Us Section */}
       <section id="about">
         <WhatWeDo />
         <StartJourney />
         <AboutSection />
       </section>
 
-      {/* Contact Section */}
       <section id="contact">
         <Newsletter />
         <Footer />

@@ -1,7 +1,6 @@
-// src/components/AuthNavbar.tsx
 import { Link, useNavigate } from "react-router-dom";
 import { FaArrowLeft, FaHome } from "react-icons/fa";
-import { motion } from "framer-motion"; // ✅ Added
+import { motion } from "framer-motion";
 
 export default function AuthNavbar() {
   const navigate = useNavigate();
@@ -14,7 +13,6 @@ export default function AuthNavbar() {
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
       <div className="flex flex-col md:flex-row items-center justify-between gap-4 md:gap-0">
-        {/* Left: Back Button */}
         <motion.div
           initial={{ opacity: 0, x: -30 }}
           animate={{ opacity: 1, x: 0 }}
@@ -30,7 +28,6 @@ export default function AuthNavbar() {
           </Link>
         </motion.div>
 
-        {/* Center: Logo */}
         <motion.div
           className="flex items-center gap-2 cursor-pointer"
           onClick={() => navigate("/")}
@@ -49,7 +46,6 @@ export default function AuthNavbar() {
           </span>
         </motion.div>
 
-        {/* Right: About Us Button */}
         <motion.button
           onClick={() => navigate("/aboutus")}
           className="flex items-center gap-2 bg-[#1E3A8A] rounded-[24px] px-5 py-2 cursor-pointer hover:bg-blue-700 transition"
@@ -67,7 +63,6 @@ export default function AuthNavbar() {
             About Us
           </span>
 
-          {/* Arrow Icon */}
           <div
             className="flex items-center justify-center"
             style={{ width: "25px", height: "25px" }}

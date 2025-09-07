@@ -30,7 +30,6 @@ export default function WhatWeDo() {
     },
   ];
 
-  // Animation variants
   const containerVariants: Variants = {
     hidden: { opacity: 0, y: 50 },
     visible: {
@@ -51,14 +50,13 @@ export default function WhatWeDo() {
       y: 0,
       transition: {
         duration: 0.5,
-        ease: "easeOut" as const, // ✅ fix: typed easing
+        ease: "easeOut" as const,
       },
     },
   };
 
   return (
     <section id="sell" className="w-full bg-white py-20 px-4 sm:px-6 lg:px-12">
-      {/* Section Title */}
       <motion.h2
         className="text-[#1E3A8A] text-3xl sm:text-4xl md:text-[35px] font-bold text-center mb-4"
         style={{ fontFamily: "Poppins", lineHeight: "100%" }}
@@ -70,7 +68,6 @@ export default function WhatWeDo() {
         What We Do?
       </motion.h2>
 
-      {/* Subtitle */}
       <motion.p
         className="text-[#555555] text-center text-base sm:text-lg md:text-xl mb-12 max-w-md mx-auto"
         style={{
@@ -87,7 +84,6 @@ export default function WhatWeDo() {
         Helping you find, buy, and rent the perfect property with ease.
       </motion.p>
 
-      {/* Cards Grid */}
       <motion.div
         className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 max-w-[1440px] mx-auto"
         variants={containerVariants}

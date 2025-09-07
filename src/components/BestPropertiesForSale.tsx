@@ -21,7 +21,6 @@ const PropertyCard = ({ property }: { property: Property }) => {
       whileHover={{ scale: 1.03 }}
       transition={{ duration: 0.3 }}
     >
-      {/* Image */}
       <div className="w-full h-[200px] overflow-hidden">
         <img
           src={property.image}
@@ -30,7 +29,6 @@ const PropertyCard = ({ property }: { property: Property }) => {
         />
       </div>
 
-      {/* Info */}
       <div className="p-4 flex flex-col gap-2 relative">
         <div className="flex items-center justify-between mb-2">
           <div className="flex items-center gap-2">
@@ -76,7 +74,7 @@ const PropertyCard = ({ property }: { property: Property }) => {
 
 export default function BestPropertiesForSale() {
   const [properties, setProperties] = useState<Property[]>([]);
-  const [visibleCount] = useState(4); // ✅ removed unused setVisibleCount
+  const [visibleCount] = useState(4);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -85,7 +83,6 @@ export default function BestPropertiesForSale() {
     )
       .then((res) => res.json())
       .then((data) => {
-        // ✅ Only show sale-type properties
         const saleProps = data.filter(
           (p: Property) =>
             p.type?.toLowerCase() === "sale" || p.type === undefined
@@ -98,7 +95,6 @@ export default function BestPropertiesForSale() {
   return (
     <section className="w-full py-16 px-4 sm:px-6 lg:px-12 bg-[#F9F9F9]">
       <div className="max-w-[1440px] mx-auto flex flex-col gap-10">
-        {/* Heading + Button */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 md:gap-0">
           <h2
             className="text-[#1E3A8A] font-bold text-3xl sm:text-4xl"
@@ -116,7 +112,6 @@ export default function BestPropertiesForSale() {
           </button>
         </div>
 
-        {/* Description */}
         <p
           className="text-[#555555] text-lg sm:text-xl md:text-[20px] leading-7 md:leading-8"
           style={{
@@ -130,7 +125,6 @@ export default function BestPropertiesForSale() {
           Find your dream home today!
         </p>
 
-        {/* Property Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 place-items-center">
           {properties.slice(0, visibleCount).map((property) => (
             <PropertyCard key={property.id} property={property} />

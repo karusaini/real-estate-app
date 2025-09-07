@@ -1,4 +1,3 @@
-// src/services/api.ts
 export type Property = {
   id: string;
   name: string;

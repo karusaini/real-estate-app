@@ -35,7 +35,6 @@ export default function Navbar() {
     <nav className="sticky top-0 z-50 bg-white shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
           <div
             className="flex items-center gap-2 cursor-pointer"
             onClick={() => navigate("/")}
@@ -60,7 +59,6 @@ export default function Navbar() {
             </span>
           </div>
 
-          {/* Desktop Links */}
           <div className="hidden md:flex flex-1 justify-center gap-6 lg:gap-8">
             {navLinks.map((link) => (
               <ScrollLink
@@ -68,7 +66,7 @@ export default function Navbar() {
                 to={link.to}
                 smooth={true}
                 duration={600}
-                offset={-70} // adjust for sticky navbar height
+                offset={-70}
                 spy={true}
                 activeClass="text-blue-700 border-b-2 border-blue-700"
                 className="text-[#1E3A8A] hover:text-blue-700 transition duration-200 pb-1"
@@ -79,7 +77,6 @@ export default function Navbar() {
             ))}
           </div>
 
-          {/* Desktop Login/Register */}
           <div className="hidden md:flex gap-3 lg:gap-4">
             <button
               onClick={() => navigate("/login")}
@@ -97,7 +94,6 @@ export default function Navbar() {
             </button>
           </div>
 
-          {/* Mobile Hamburger */}
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -126,7 +122,6 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Menu */}
       {mobileMenuOpen && (
         <div className="md:hidden bg-white shadow-md px-4 pb-4">
           <div className="flex flex-col gap-3 py-2">
@@ -147,7 +142,6 @@ export default function Navbar() {
               </ScrollLink>
             ))}
 
-            {/* Mobile Login/Register */}
             <div className="flex flex-col gap-2 mt-2">
               <button
                 onClick={() => {

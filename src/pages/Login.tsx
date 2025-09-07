@@ -8,7 +8,7 @@ import { AiFillEye } from "react-icons/ai";
 import { FaApple, FaFacebookF, FaGoogle } from "react-icons/fa";
 import { auth } from "../services/firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
-import { motion } from "framer-motion"; // ✅ Added for animations
+import { motion } from "framer-motion";
 
 export default function Login() {
   const [showPassword, setShowPassword] = useState(false);
@@ -53,7 +53,6 @@ export default function Login() {
     <div className="min-h-screen bg-white flex flex-col">
       <AuthNavbar />
       <div className="flex flex-col-reverse md:flex-row items-stretch justify-between flex-1 max-w-7xl mx-auto w-full px-6 py-12 gap-8">
-        {/* Form Section */}
         <motion.div
           className="w-full md:w-2/5 flex flex-col justify-center"
           initial={{ opacity: 0, x: -50 }}
@@ -74,7 +73,6 @@ export default function Login() {
             className="w-full max-w-md flex flex-col gap-4"
             onSubmit={handleLogin}
           >
-            {/* Email */}
             <motion.div
               className="relative"
               whileFocus={{ scale: 1.02 }}
@@ -97,7 +95,6 @@ export default function Login() {
               )}
             </motion.div>
 
-            {/* Password */}
             <motion.div
               className="relative"
               whileFocus={{ scale: 1.02 }}
@@ -123,7 +120,6 @@ export default function Login() {
               )}
             </motion.div>
 
-            {/* Remember Me */}
             <div className="flex items-center gap-2">
               <input type="checkbox" id="remember" className="w-4 h-4" />
               <label
@@ -135,7 +131,6 @@ export default function Login() {
               </label>
             </div>
 
-            {/* Login Button */}
             <motion.button
               type="submit"
               className="w-full h-[55px] sm:h-[62px] rounded-[34px] bg-[#1E3A8A] shadow-sm sm:shadow-md flex items-center justify-center text-white text-[20px] sm:text-[24px]"
@@ -147,7 +142,6 @@ export default function Login() {
             </motion.button>
           </form>
 
-          {/* Social Login */}
           <div className="flex items-center gap-4 mt-6">
             <div className="flex-1 h-[1px] bg-gray-300"></div>
             <p className="text-center text-[14px] sm:text-[16px] text-gray-500">
@@ -191,7 +185,6 @@ export default function Login() {
           </p>
         </motion.div>
 
-        {/* Illustration */}
         <motion.div
           className="w-full md:w-3/5 flex justify-center items-center"
           initial={{ opacity: 0, scale: 0.9 }}

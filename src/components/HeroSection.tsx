@@ -22,7 +22,6 @@ export default function Hero() {
     navigate("/list-property");
   };
 
-  // Close dropdown if clicked outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (
@@ -68,7 +67,6 @@ export default function Hero() {
             Discover, Buy, or Rent Verified Properties with Ease.
           </motion.p>
 
-          {/* Search Input */}
           <motion.div className="mt-6 sm:mt-8 w-full max-w-[620px] h-[72px] bg-white rounded-full shadow-lg flex items-center px-4 sm:px-6 md:px-6 gap-3 sm:gap-4 relative">
             <FiMapPin className="text-gray-400 w-5 h-5 sm:w-6 sm:h-6" />
             <input
@@ -97,7 +95,6 @@ export default function Hero() {
               <FiSearch className="text-white w-4 h-4 sm:w-6 sm:h-6" />
             </button>
 
-            {/* Dropdown */}
             <AnimatePresence>
               {dropdownOpen && (
                 <motion.div
@@ -125,7 +122,6 @@ export default function Hero() {
             </AnimatePresence>
           </motion.div>
 
-          {/* List Your Property Button */}
           <motion.div className="mt-4 sm:mt-6 relative w-full flex justify-center">
             <button
               onClick={handleListProperty}

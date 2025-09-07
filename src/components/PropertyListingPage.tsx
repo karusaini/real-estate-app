@@ -8,12 +8,11 @@ interface Property {
   country: string;
   image: string;
   description?: string;
-  type?: string; // sale / rent
+  type?: string;
 }
 
 const PropertyCard = ({ property }: { property: Property }) => (
   <div className="w-full max-w-[340px] bg-white rounded-[20px] shadow-md overflow-hidden flex flex-col">
-    {/* Image */}
     <div className="w-full h-[200px] overflow-hidden">
       <img
         src={property.image}
@@ -22,7 +21,6 @@ const PropertyCard = ({ property }: { property: Property }) => (
       />
     </div>
 
-    {/* Info */}
     <div className="p-4 flex flex-col gap-2">
       <div className="flex items-center gap-2">
         <FaMapMarkerAlt className="w-5 h-5 text-[#1E3A8A]" />
@@ -72,7 +70,6 @@ export default function PropertyListingPage() {
       .catch((err) => console.error("API Fetch Error:", err));
   }, []);
 
-  // Filter properties
   const filteredProperties =
     filter === "all"
       ? properties
@@ -83,7 +80,6 @@ export default function PropertyListingPage() {
   return (
     <section className="w-full py-16 px-4 sm:px-6 lg:px-12 bg-[#F9F9F9] min-h-screen">
       <div className="max-w-[1440px] mx-auto flex flex-col gap-10">
-        {/* Heading + Filter */}
         <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
           <h2
             className="text-[#1E3A8A] font-bold text-3xl sm:text-4xl"
@@ -92,7 +88,6 @@ export default function PropertyListingPage() {
             Property Listings
           </h2>
 
-          {/* Filter Buttons */}
           <div className="flex gap-4">
             <button
               onClick={() => setFilter("all")}
@@ -130,7 +125,6 @@ export default function PropertyListingPage() {
           </div>
         </div>
 
-        {/* Cards Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 place-items-center">
           {filteredProperties.map((property) => (
             <PropertyCard key={property.id} property={property} />

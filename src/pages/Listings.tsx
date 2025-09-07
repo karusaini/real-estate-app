@@ -15,7 +15,6 @@ export default function Listings() {
 
   const location = useLocation();
 
-  // 👇 Read query param from URL
   useEffect(() => {
     const params = new URLSearchParams(location.search);
     const filterParam = params.get("filter") as "sale" | "rent" | null;
@@ -48,13 +47,11 @@ export default function Listings() {
       <HeroFilters />
       <ListingsFeatured />
 
-      {/* Property Listings Section */}
       <section className="flex-1 px-4 sm:px-6 lg:px-12 py-12 max-w-[1440px] mx-auto">
         {loading ? (
           <p className="text-center text-lg">Loading properties...</p>
         ) : (
           <>
-            {/* Heading with Filter */}
             <div className="flex flex-col sm:flex-row justify-between items-center mb-10">
               <h2
                 className="text-[#1E3A8A] font-bold text-3xl sm:text-4xl"
@@ -67,7 +64,6 @@ export default function Listings() {
                   : "All Properties"}
               </h2>
 
-              {/* Filter Buttons */}
               <div className="flex gap-4 mt-4 sm:mt-0">
                 <button
                   onClick={() => setFilter("all")}
@@ -102,7 +98,6 @@ export default function Listings() {
               </div>
             </div>
 
-            {/* Properties Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-8 justify-items-center">
               {filteredProperties.length > 0 ? (
                 filteredProperties.map((property) => (

@@ -1,4 +1,3 @@
-// src/components/Newsletter.tsx
 import { useState } from "react";
 import { motion } from "framer-motion";
 
@@ -9,7 +8,6 @@ export default function Newsletter() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!email) return;
-    // Here you can add API call or Firebase integration for newsletter
     console.log("Subscribed with email:", email);
     setSubmitted(true);
     setEmail("");
@@ -24,7 +22,6 @@ export default function Newsletter() {
       viewport={{ once: true }}
     >
       <div className="max-w-4xl mx-auto flex flex-col items-center text-center gap-6">
-        {/* Heading */}
         <motion.h2
           className="text-2xl sm:text-3xl lg:text-4xl font-bold"
           style={{ fontFamily: "Poppins" }}
@@ -35,7 +32,6 @@ export default function Newsletter() {
           Subscribe to our Newsletter
         </motion.h2>
 
-        {/* Subtext */}
         <motion.p
           className="text-sm sm:text-base lg:text-lg text-gray-200 max-w-2xl"
           style={{ fontFamily: "Poppins" }}
@@ -46,7 +42,6 @@ export default function Newsletter() {
           Get the latest property listings and updates directly to your inbox.
         </motion.p>
 
-        {/* Form */}
         <motion.form
           onSubmit={handleSubmit}
           className="w-full flex flex-col sm:flex-row gap-4 mt-4"
@@ -72,7 +67,6 @@ export default function Newsletter() {
           </motion.button>
         </motion.form>
 
-        {/* Success Message */}
         {submitted && (
           <motion.p
             className="mt-4 text-green-400 font-medium text-sm sm:text-base"
