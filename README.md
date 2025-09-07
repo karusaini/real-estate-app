@@ -7,7 +7,9 @@ Browse properties for sale or rent, use smart search filters, and view detailed 
 
 ## **Live Demo**
 
-[Live Deployed Website](YOUR_VERCEL_OR_NETLIFY_LINK_HERE)
+[Live Deployed Website] https://real-estate-app-aan7.vercel.app
+
+## **Video Link**
 
 ---
 
@@ -67,7 +69,7 @@ Copy code
 ### Clone Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/real-estate-app.git
+git clone https://github.com/karusaini/real-estate-app
 cd real-estate-app
 Install Dependencies
 bash
@@ -135,6 +137,6 @@ For any queries, contact me at: your.email@example.com
 
 ---
 
-This README is **professional and complete**. ✅
+This README is **professional and complete**.
 
 ```
