@@ -19,7 +19,6 @@ export default function WhatWeDoCard({ icon, title, description }: CardProps) {
       <h3
         className="text-center text-black text-lg sm:text-xl font-normal mb-2"
         style={{
-          fontFamily: "Poppins",
           lineHeight: "26px",
           letterSpacing: "2%",
           fontWeight: 400,
@@ -31,7 +30,6 @@ export default function WhatWeDoCard({ icon, title, description }: CardProps) {
       <p
         className="text-center text-black text-xs sm:text-sm"
         style={{
-          fontFamily: "Poppins",
           lineHeight: "19px",
           letterSpacing: "2%",
           fontWeight: 400,

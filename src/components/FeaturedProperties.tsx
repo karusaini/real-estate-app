@@ -33,7 +33,7 @@ export default function FeaturedProperties() {
       <div className="flex flex-col lg:flex-row justify-between items-center mb-12 gap-4">
         <motion.h2
           className="text-[#1E3A8A] font-bold text-4xl sm:text-5xl text-center lg:text-left"
-          style={{ fontFamily: "Poppins", lineHeight: "100%" }}
+          style={{ lineHeight: "100%" }}
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -47,10 +47,7 @@ export default function FeaturedProperties() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <span
-            className="text-[#1E3A8A] text-lg font-normal transition-colors duration-300 hover:text-white"
-            style={{ fontFamily: "Poppins" }}
-          >
+          <span className="text-[#1E3A8A] text-lg font-normal transition-colors duration-300 hover:text-white">
             See {properties.length} New Projects
           </span>
           <svg
@@ -90,16 +87,12 @@ export default function FeaturedProperties() {
               <span
                 className="text-white text-sm sm:text-lg"
                 style={{
-                  fontFamily: "Poppins",
                   fontWeight: 400,
                 }}
               >
                 By {properties[0].ownerName}
               </span>
-              <span
-                className="text-white text-xl sm:text-2xl font-semibold"
-                style={{ fontFamily: "Poppins" }}
-              >
+              <span className="text-white text-xl sm:text-2xl font-semibold">
                 {properties[0].name}
               </span>
             </div>

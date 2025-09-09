@@ -45,7 +45,7 @@ export default function AboutSection() {
         >
           <motion.h2
             className="text-[#1E3A8A] text-2xl sm:text-3xl md:text-[36px] font-bold leading-snug"
-            style={{ fontFamily: "Poppins", letterSpacing: "1px" }}
+            style={{ letterSpacing: "1px" }}
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.6 }}

@@ -84,10 +84,7 @@ export default function PropertyDetails() {
 
         <div className="p-6 sm:p-10 flex flex-col gap-6">
           <div className="flex justify-between items-center">
-            <h1
-              className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1E3A8A]"
-              style={{ fontFamily: "Poppins" }}
-            >
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1E3A8A]">
               {property.name}
             </h1>
             <FaBookmark className="text-[#1E3A8A] w-6 h-6 cursor-pointer" />

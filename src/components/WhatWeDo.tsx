@@ -59,7 +59,7 @@ export default function WhatWeDo() {
     <section id="sell" className="w-full bg-white py-20 px-4 sm:px-6 lg:px-12">
       <motion.h2
         className="text-[#1E3A8A] text-3xl sm:text-4xl md:text-[35px] font-bold text-center mb-4"
-        style={{ fontFamily: "Poppins", lineHeight: "100%" }}
+        style={{ lineHeight: "100%" }}
         initial={{ opacity: 0, y: -30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -71,7 +71,6 @@ export default function WhatWeDo() {
       <motion.p
         className="text-[#555555] text-center text-base sm:text-lg md:text-xl mb-12 max-w-md mx-auto"
         style={{
-          fontFamily: "Poppins",
           fontWeight: 400,
           lineHeight: "28px",
           letterSpacing: "2%",

@@ -24,32 +24,20 @@ const PropertyCard = ({ property }: { property: Property }) => (
     <div className="p-4 flex flex-col gap-2">
       <div className="flex items-center gap-2">
         <FaMapMarkerAlt className="w-5 h-5 text-[#1E3A8A]" />
-        <span
-          className="text-black text-[16px] font-medium"
-          style={{ fontFamily: "Poppins" }}
-        >
+        <span className="text-black text-[16px] font-medium">
           {property.name}, {property.city}
         </span>
       </div>
 
-      <p
-        className="text-[#555555] text-[14px] leading-[20px]"
-        style={{ fontFamily: "Poppins" }}
-      >
+      <p className="text-[#555555] text-[14px] leading-[20px]">
         {property.description || "Beautiful property with modern amenities."}
       </p>
 
       <div className="flex justify-between items-center mt-3">
-        <span
-          className="text-[#1E1E1E] font-semibold text-[18px]"
-          style={{ fontFamily: "Poppins" }}
-        >
+        <span className="text-[#1E1E1E] font-semibold text-[18px]">
           {property.type ? property.type.toUpperCase() : "SALE"}
         </span>
-        <button
-          className="bg-[#1E3A8A] text-white text-[14px] font-semibold px-4 py-2 rounded-[31px]"
-          style={{ fontFamily: "Poppins" }}
-        >
+        <button className="bg-[#1E3A8A] text-white text-[14px] font-semibold px-4 py-2 rounded-[31px]">
           Know More
         </button>
       </div>

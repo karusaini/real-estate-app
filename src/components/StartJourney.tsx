@@ -31,7 +31,7 @@ export default function StartJourney() {
       <div className="max-w-[1440px] mx-auto flex flex-col gap-6">
         <motion.h2
           className="text-[#1E3A8A] font-bold text-2xl sm:text-3xl md:text-[40px] text-left"
-          style={{ fontFamily: "Poppins", lineHeight: "120%" }}
+          style={{ lineHeight: "120%" }}
           initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -42,7 +42,7 @@ export default function StartJourney() {
 
         <motion.p
           className="text-[#555555] text-base sm:text-lg md:text-[20px] text-left leading-7"
-          style={{ fontFamily: "Poppins", letterSpacing: "1px" }}
+          style={{ letterSpacing: "1px" }}
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -64,7 +64,7 @@ export default function StartJourney() {
             value={name}
             onChange={(e) => setName(e.target.value)}
             className="w-full max-w-[336px] h-[50px] px-4 rounded-[8px] border border-[#CCCCCC] text-[16px] text-[#555] focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
-            style={{ fontFamily: "Poppins", letterSpacing: "1px" }}
+            style={{ letterSpacing: "1px" }}
             whileFocus={{ scale: 1.02 }}
           />
 
@@ -76,7 +76,7 @@ export default function StartJourney() {
               value={userType}
               onChange={(e) => setUserType(e.target.value)}
               className="appearance-none w-full h-[50px] px-4 rounded-[8px] border border-[#CCCCCC] text-[16px] text-[#555] focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
-              style={{ fontFamily: "Poppins", letterSpacing: "1px" }}
+              style={{ letterSpacing: "1px" }}
             >
               <option value="">Select User Type</option>
               <option value="Buyer">Buyer</option>
@@ -92,14 +92,14 @@ export default function StartJourney() {
             value={location}
             onChange={(e) => setLocation(e.target.value)}
             className="w-full max-w-[336px] h-[50px] px-4 rounded-[8px] border border-[#CCCCCC] text-[16px] text-[#555] focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
-            style={{ fontFamily: "Poppins", letterSpacing: "1px" }}
+            style={{ letterSpacing: "1px" }}
             whileFocus={{ scale: 1.02 }}
           />
 
           <motion.button
             onClick={handleSubmit}
             className="w-full max-w-[225px] h-[50px] bg-[#1E3A8A] text-white rounded-[31px] text-[18px] font-semibold hover:bg-blue-800 transition cursor-pointer"
-            style={{ fontFamily: "Poppins", lineHeight: "100%" }}
+            style={{ lineHeight: "100%" }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -110,7 +110,6 @@ export default function StartJourney() {
         {error && (
           <motion.p
             className="text-red-500 text-sm mt-2"
-            style={{ fontFamily: "Poppins" }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
           >

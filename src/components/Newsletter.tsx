@@ -24,7 +24,6 @@ export default function Newsletter() {
       <div className="max-w-4xl mx-auto flex flex-col items-center text-center gap-6">
         <motion.h2
           className="text-2xl sm:text-3xl lg:text-4xl font-bold"
-          style={{ fontFamily: "Poppins" }}
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.6 }}
@@ -34,7 +33,6 @@ export default function Newsletter() {
 
         <motion.p
           className="text-sm sm:text-base lg:text-lg text-gray-200 max-w-2xl"
-          style={{ fontFamily: "Poppins" }}
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.4, duration: 0.6 }}
@@ -70,7 +68,6 @@ export default function Newsletter() {
         {submitted && (
           <motion.p
             className="mt-4 text-green-400 font-medium text-sm sm:text-base"
-            style={{ fontFamily: "Poppins" }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}

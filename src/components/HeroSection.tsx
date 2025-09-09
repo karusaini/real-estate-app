@@ -55,14 +55,14 @@ export default function Hero() {
         >
           <motion.h1
             className="text-white text-3xl sm:text-4xl md:text-5xl font-bold"
-            style={{ fontFamily: "Poppins", lineHeight: "100%" }}
+            style={{ lineHeight: "100%" }}
           >
             Find Your Dream Home in One Click!
           </motion.h1>
 
           <motion.p
             className="text-[#EEEEEE] text-base sm:text-lg md:text-xl"
-            style={{ fontFamily: "Poppins", fontWeight: 400 }}
+            style={{ fontWeight: 400 }}
           >
             Discover, Buy, or Rent Verified Properties with Ease.
           </motion.p>
@@ -71,11 +71,11 @@ export default function Hero() {
             <FiMapPin className="text-gray-400 w-5 h-5 sm:w-6 sm:h-6" />
             <input
               type="text"
-              placeholder="Enter location"
+              placeholder="Search location"
               value={location}
               onChange={(e) => setLocation(e.target.value)}
               className="flex-1 h-full text-sm sm:text-lg md:text-lg outline-none placeholder-gray-400"
-              style={{ fontFamily: "Poppins", fontWeight: 400 }}
+              style={{ fontWeight: 400 }}
               onClick={() => setDropdownOpen(true)}
             />
             <motion.div
@@ -128,10 +128,7 @@ export default function Hero() {
               className="flex items-center justify-center rounded-[24px] border-2 px-4 sm:px-5 py-2 cursor-pointer bg-white hover:bg-[#1E3A8A] transition-colors duration-300"
               style={{ gap: "4px", maxWidth: "194px" }}
             >
-              <span
-                className="text-[#1E3A8A] hover:text-white text-sm sm:text-base text-center w-full font-medium transition-colors duration-300"
-                style={{ fontFamily: "Poppins" }}
-              >
+              <span className="text-[#1E3A8A] hover:text-white text-sm sm:text-base text-center w-full font-medium transition-colors duration-300">
                 List Your Property
               </span>
             </button>

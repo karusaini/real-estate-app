@@ -33,36 +33,26 @@ const PropertyCard = ({ property }: { property: Property }) => {
         <div className="flex items-center justify-between mb-2">
           <div className="flex items-center gap-2">
             <FaMapMarkerAlt className="w-5 h-5 text-[#1E3A8A]" />
-            <span
-              className="text-black text-[16px] font-medium"
-              style={{ fontFamily: "Poppins" }}
-            >
+            <span className="text-black text-[16px] font-medium">
               {property.name}, {property.city}
             </span>
           </div>
           <FaBookmark className="w-5 h-5 text-[#1E3A8A]" />
         </div>
 
-        <p
-          className="text-[#555555] text-[14px] leading-[20px]"
-          style={{ fontFamily: "Poppins" }}
-        >
+        <p className="text-[#555555] text-[14px] leading-[20px]">
           {property.description || "Beautiful property with modern amenities."}
         </p>
 
         <div className="my-4 w-full border-t border-[#00000033]"></div>
 
         <div className="flex items-center justify-between">
-          <span
-            className="text-[#1E1E1E] font-semibold text-[18px]"
-            style={{ fontFamily: "Poppins" }}
-          >
+          <span className="text-[#1E1E1E] font-semibold text-[18px]">
             ${Math.floor(Math.random() * 900000) + 100000}
           </span>
           <button
             onClick={() => navigate(`/property/${property.id}`)}
             className="bg-[#1E3A8A] hover:bg-blue-700 text-white text-[14px] font-semibold px-4 py-2 rounded-[31px] transition cursor-pointer"
-            style={{ fontFamily: "Poppins" }}
           >
             Know More
           </button>
@@ -92,17 +82,13 @@ export default function BestPropertiesForSale() {
     <section className="w-full py-16 px-4 sm:px-6 lg:px-12 bg-[#F9F9F9]">
       <div className="max-w-[1440px] mx-auto flex flex-col gap-10">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 md:gap-0">
-          <h2
-            className="text-[#1E3A8A] font-bold text-3xl sm:text-4xl"
-            style={{ fontFamily: "Poppins" }}
-          >
+          <h2 className="text-[#1E3A8A] font-bold text-3xl sm:text-4xl">
             Find The Perfect Rental Home
           </h2>
 
           <button
             onClick={() => navigate("/listings")}
             className="bg-[#1E3A8A] text-white font-semibold text-lg px-6 py-2 rounded-[31px] hover:bg-blue-700 transition cursor-pointer"
-            style={{ fontFamily: "Poppins" }}
           >
             View All Rentals
           </button>
@@ -111,7 +97,6 @@ export default function BestPropertiesForSale() {
         <p
           className="text-[#555555] text-lg sm:text-xl md:text-[20px] leading-7 md:leading-8"
           style={{
-            fontFamily: "Poppins",
             fontWeight: 400,
             letterSpacing: "2%",
           }}

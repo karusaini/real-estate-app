@@ -21,7 +21,6 @@ export default function AuthNavbar() {
           <Link
             to="/"
             className="flex items-center gap-2 border border-[#1E3A8A] rounded-[24px] px-5 py-2 hover:bg-gray-50 transition"
-            style={{ fontFamily: "Poppins" }}
           >
             <FaArrowLeft className="text-[#1E3A8A] w-5 h-5" />
             <span className="text-[#555555] text-[18px]">Back to Homepage</span>
@@ -38,12 +37,7 @@ export default function AuthNavbar() {
           whileTap={{ scale: 0.95 }}
         >
           <FaHome className="text-[#1E1E1E] w-8 h-8" />
-          <span
-            className="text-[#1E1E1E] font-bold text-[24px]"
-            style={{ fontFamily: "Poppins" }}
-          >
-            PropBot
-          </span>
+          <span className="text-[#1E1E1E] font-bold text-[24px]">PropBot</span>
         </motion.div>
 
         <motion.button
@@ -56,12 +50,7 @@ export default function AuthNavbar() {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          <span
-            className="text-[#FFFFFF] text-[18px]"
-            style={{ fontFamily: "Poppins" }}
-          >
-            About Us
-          </span>
+          <span className="text-[#FFFFFF] text-[18px]">About Us</span>
 
           <div
             className="flex items-center justify-center"

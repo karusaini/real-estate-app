@@ -26,7 +26,7 @@ export default function Footer() {
       >
         <motion.h2
           className="text-white font-bold text-3xl sm:text-4xl md:text-5xl text-center"
-          style={{ fontFamily: "Poppins", letterSpacing: "2%" }}
+          style={{ letterSpacing: "2%" }}
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.7 }}
@@ -36,7 +36,6 @@ export default function Footer() {
 
         <motion.p
           className="text-white text-base sm:text-lg md:text-2xl text-center max-w-[600px] leading-relaxed"
-          style={{ fontFamily: "Poppins" }}
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.7 }}
@@ -58,7 +57,6 @@ export default function Footer() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               className="flex-1 bg-transparent text-[#555555] text-base sm:text-lg md:text-xl outline-none placeholder-[#777] px-2"
-              style={{ fontFamily: "Poppins" }}
               required
             />
             <motion.button
@@ -66,7 +64,6 @@ export default function Footer() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="ml-4 px-4 sm:px-6 py-2 sm:py-3 bg-[#1E3A8A] rounded-[99px] text-white text-sm sm:text-base md:text-lg font-semibold transition-colors duration-300 hover:bg-blue-900 cursor-pointer"
-              style={{ fontFamily: "Poppins" }}
             >
               Submit
             </motion.button>
@@ -76,7 +73,6 @@ export default function Footer() {
         {submitted && (
           <motion.p
             className="text-green-300 mt-4 font-medium"
-            style={{ fontFamily: "Poppins" }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
@@ -96,10 +92,7 @@ export default function Footer() {
           <div className="w-8 h-8 flex items-center justify-center">
             <FaHome className="w-6 h-6 text-white" />
           </div>
-          <span
-            className="text-[#D9D9D9] font-bold text-xl sm:text-2xl"
-            style={{ fontFamily: "Poppins" }}
-          >
+          <span className="text-[#D9D9D9] font-bold text-xl sm:text-2xl">
             PropBot
           </span>
         </div>
@@ -111,7 +104,6 @@ export default function Footer() {
                 key={i}
                 href="#"
                 className="relative group"
-                style={{ fontFamily: "Poppins" }}
                 whileHover={{ scale: 1.1 }}
               >
                 {link}
@@ -121,10 +113,7 @@ export default function Footer() {
           )}
         </div>
 
-        <span
-          className="text-white text-sm sm:text-base md:text-lg text-center"
-          style={{ fontFamily: "Poppins" }}
-        >
+        <span className="text-white text-sm sm:text-base md:text-lg text-center">
           ©2025 PropBot. All rights reserved
         </span>
       </motion.div>

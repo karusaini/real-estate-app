@@ -85,10 +85,7 @@ export default function HeroFilters() {
           }
         >
           <FaCity className="w-5 h-5 text-gray-600" />
-          <span
-            className="text-[#1E1E1E] text-base font-normal"
-            style={{ fontFamily: "Poppins" }}
-          >
+          <span className="text-[#1E1E1E] text-base font-normal">
             {selected.rent}
           </span>
           <motion.div
@@ -107,10 +104,7 @@ export default function HeroFilters() {
           }
         >
           <FaHome className="w-5 h-5 text-gray-600" />
-          <span
-            className="text-[#1E1E1E] text-base font-normal"
-            style={{ fontFamily: "Poppins" }}
-          >
+          <span className="text-[#1E1E1E] text-base font-normal">
             {selected.type}
           </span>
           <motion.div
@@ -129,10 +123,7 @@ export default function HeroFilters() {
           }
         >
           <MdLocationOn className="w-5 h-5 text-gray-600" />
-          <span
-            className="text-[#1E1E1E] text-base font-normal"
-            style={{ fontFamily: "Poppins" }}
-          >
+          <span className="text-[#1E1E1E] text-base font-normal">
             {selected.country}
           </span>
           <motion.div
@@ -146,7 +137,6 @@ export default function HeroFilters() {
 
         <button
           className="ml-auto w-[194px] h-[58px] bg-[#1E3A8A] text-white rounded-[31px] text-lg font-normal hover:bg-blue-700 transition-colors cursor-pointer"
-          style={{ fontFamily: "Poppins" }}
           onClick={handleFindProperty}
         >
           Find Property

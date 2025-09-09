@@ -13,14 +13,14 @@ export default function ListingsHero() {
         <div className="absolute bottom-0 w-full h-[208px] bg-[#3F3F3F99] backdrop-blur-[20px] rounded-b-[34px] flex flex-col justify-center px-8 md:px-16">
           <h1
             className="text-white font-bold text-3xl sm:text-4xl md:text-[48px] mb-2"
-            style={{ fontFamily: "Poppins", lineHeight: "100%" }}
+            style={{ lineHeight: "100%" }}
           >
             Featured Properties For Sale
           </h1>
 
           <p
             className="text-[#EEEEEE] text-base sm:text-lg md:text-[20px]"
-            style={{ fontFamily: "Poppins", lineHeight: "100%" }}
+            style={{ lineHeight: "100%" }}
           >
             Discover, Buy, or Rent Verified Properties with Ease.
           </p>

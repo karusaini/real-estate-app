@@ -17,11 +17,11 @@ export default function Navbar() {
   ];
 
   const textStyle: React.CSSProperties = {
-    fontFamily: "Poppins",
     fontWeight: 500,
     fontSize: "16px",
     lineHeight: "24px",
     cursor: "pointer",
+    font: "normal",
   };
 
   const buttonStyle = {
@@ -51,10 +51,7 @@ export default function Navbar() {
                 fill="#1E1E1E"
               />
             </svg>
-            <span
-              className="text-[#1E1E1E] text-2xl sm:text-3xl font-bold"
-              style={{ fontFamily: "Poppins" }}
-            >
+            <span className="text-[#1E1E1E] text-2xl sm:text-3xl font-bold">
               PropBot
             </span>
           </div>
