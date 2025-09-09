@@ -53,10 +53,7 @@ export default function Listings() {
         ) : (
           <>
             <div className="flex flex-col sm:flex-row justify-between items-center mb-10">
-              <h2
-                className="text-[#1E3A8A] font-bold text-3xl sm:text-4xl"
-                style={{ fontFamily: "Poppins" }}
-              >
+              <h2 className="text-[#1E3A8A] font-bold text-3xl sm:text-4xl">
                 {filter === "sale"
                   ? "Properties For Sale"
                   : filter === "rent"

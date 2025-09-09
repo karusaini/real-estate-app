@@ -78,7 +78,6 @@ export default function Signup() {
         >
           <motion.h1
             className="text-2xl sm:text-3xl md:text-[34px] font-bold text-[#1E1E1E] mb-8 text-center md:text-left"
-            style={{ fontFamily: "Poppins" }}
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}

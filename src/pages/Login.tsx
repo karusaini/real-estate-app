@@ -61,7 +61,6 @@ export default function Login() {
         >
           <motion.h1
             className="text-2xl sm:text-3xl md:text-[34px] font-bold text-[#1E1E1E] mb-8 text-center md:text-left"
-            style={{ fontFamily: "Poppins" }}
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
@@ -125,7 +124,6 @@ export default function Login() {
               <label
                 htmlFor="remember"
                 className="text-[#1E1E1E] text-[14px] sm:text-[16px]"
-                style={{ fontFamily: "Poppins" }}
               >
                 Remember Me
               </label>
