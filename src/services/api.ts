@@ -7,7 +7,7 @@ export type Property = {
   ownerName: string;
   contactNumber: string;
   createdAt: string;
-  type: "sale" | "rent"; // 👈 extra field
+  type: "sale" | "rent";
 };
 
 const BASE_URL =
@@ -20,7 +20,6 @@ export async function fetchProperties(): Promise<Property[]> {
   }
   const data = await res.json();
 
-  // Randomly assign type
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   return data.map((item: any) => ({
     ...item,
