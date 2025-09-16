@@ -34,7 +34,6 @@ export default function Listings() {
     loadProperties();
   }, []);
 
-  // 👇 Apply filter
   const filteredProperties =
     filter === "all"
       ? properties
