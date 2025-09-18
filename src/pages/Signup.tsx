@@ -77,7 +77,7 @@ export default function Signup() {
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
           <motion.h1
-            className="text-2xl sm:text-3xl md:text-[34px] font-bold text-[#1E1E1E] mb-8 text-center md:text-left"
+            className="text-2xl sm:text-3xl md:text-[34px] font-bold text-[#1E1E1E] mb-8 text-center md:text-left flex justify-center"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
@@ -173,7 +173,7 @@ export default function Signup() {
 
             <motion.button
               type="submit"
-              className="w-full h-[55px] sm:h-[62px] rounded-[34px] bg-[#1E3A8A] shadow-sm sm:shadow-md flex items-center justify-center text-white text-[20px] sm:text-[24px]"
+              className="w-full h-[55px] sm:h-[62px] rounded-[34px] bg-[#1E3A8A] shadow-sm sm:shadow-md flex items-center justify-center text-white text-[20px] sm:text-[24px] cursor-pointer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               transition={{ duration: 0.2 }}

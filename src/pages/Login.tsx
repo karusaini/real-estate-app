@@ -60,7 +60,7 @@ export default function Login() {
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
           <motion.h1
-            className="text-2xl sm:text-3xl md:text-[34px] font-bold text-[#1E1E1E] mb-8 text-center md:text-left"
+            className="text-2xl sm:text-3xl md:text-[34px] font-bold text-[#1E1E1E] mb-8 text-center md:text-left flex justify-center"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
@@ -131,7 +131,7 @@ export default function Login() {
 
             <motion.button
               type="submit"
-              className="w-full h-[55px] sm:h-[62px] rounded-[34px] bg-[#1E3A8A] shadow-sm sm:shadow-md flex items-center justify-center text-white text-[20px] sm:text-[24px]"
+              className="w-full h-[55px] sm:h-[62px] rounded-[34px] bg-[#1E3A8A] shadow-sm sm:shadow-md flex items-center justify-center text-white text-[20px] sm:text-[24px] cursor-pointer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               transition={{ duration: 0.2 }}
@@ -148,23 +148,23 @@ export default function Login() {
             <div className="flex-1 h-[1px] bg-gray-300"></div>
           </div>
 
-          <div className="flex flex-col sm:flex-row justify-center gap-4 mt-4">
+          <div className="flex flex-col sm:flex-row justify-center gap-4 mt-4 ">
             <motion.button
-              className="flex items-center justify-center w-full sm:w-12 h-12 rounded-full bg-gray-100 hover:bg-gray-200 transition"
+              className="flex items-center justify-center w-full sm:w-12 h-12 rounded-full bg-gray-100 hover:bg-gray-200 transition cursor-pointer"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
               <FaApple size={20} />
             </motion.button>
             <motion.button
-              className="flex items-center justify-center w-full sm:w-12 h-12 rounded-full bg-gray-100 hover:bg-gray-200 transition"
+              className="flex items-center justify-center w-full sm:w-12 h-12 rounded-full bg-gray-100 hover:bg-gray-200 transition cursor-pointer"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
               <FaFacebookF size={20} className="text-blue-600" />
             </motion.button>
             <motion.button
-              className="flex items-center justify-center w-full sm:w-12 h-12 rounded-full bg-gray-100 hover:bg-gray-200 transition"
+              className="flex items-center justify-center w-full sm:w-12 h-12 rounded-full bg-gray-100 hover:bg-gray-200 transition cursor-pointer"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
